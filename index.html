@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ジェイ</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="clock-box">
+        <div id="clockbox"></div>
+
+        <script type="text/javascript">
+        function GetClock(){
+        var d=new Date();
+        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+        if(nmin<=9) nmin="0"+nmin;
+        if(nsec<=9) nsec="0"+nsec;
+        
+        var clocktext=""+nhour+":"+nmin+":"+nsec+"";
+        document.getElementById('clockbox').innerHTML=clocktext;
+        }
+        
+        GetClock();
+        setInterval(GetClock,1000);
+        </script>
+        
+
+        <div id="datebox"></div>
+
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+document.getElementById('datebox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+
+
+
+      </div>
+     
+      <img src="room.webp" alt="image of glitch">
+
+
+        <nav>
+          
+            <ul>
+              <li><a href="https://youtube.com">youtube</a></li>
+              <li><a href="https://github.com">github</a></li>
+              <li><a href="https://twitter.com">twitter</a></li>
+              <li><a href="https://new.reddit.com">reddit</a></li>
+            </ul>
+        
+            <ul>
+              <li><a href="https://namemc.com">namemc</a></li>
+              <li><a href="https://unsplash.com">unsplash</a></li>
+              <li><a href="https://chat.openai.com">chatgpt</a></li>
+              <li><a href="https://translate.google.com">translate</a></li>
+            </ul>
+        
+            <ul>
+              <li><a href="https://studio.youtube.com/">yt studio</a></li>
+              <li><a href="https://last.fm">last.fm</a></li>
+              <li><a href="https://instagram.com">instagram</a></li>
+              <li><a href="https://deviantart.com">deviantart</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="https://discord.com/app">discord</a></li>
+              <li><a href="https://spotify.com">spotify</a></li>
+              <li><a href="https://socialblade.com">socialblade</a></li>
+              <li><a href="https://web.archive.org">wayback machine</a></li>
+            </ul>
+
+            
+
+          </nav>
+          <form action="https://google.com/search" method="GET" target="_blank">
+            <input autofocus
+                   name="q"
+                   type="search"
+                   placeholder="search google..."
+                    tabindex="1">
+          </form>
+    </body>
+</html>
